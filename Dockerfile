@@ -2,4 +2,6 @@ FROM busybox:latest
 
 MAINTAINER "cjsys"
 
-RUN mkdir /mydir && touch /mydir/myfile && echo 'auto build' > /mydir/myfile
+RUN mkdir /mydir 
+WORKDIR /mydir
+RUN touch myfile && echo 'auto build' > myfile
